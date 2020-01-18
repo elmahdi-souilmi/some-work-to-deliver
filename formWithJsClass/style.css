@@ -1,0 +1,39 @@
+html,body{
+    background-image: linear-gradient(rgb(62, 59, 218),#1fca61 );
+    padding: 0px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+
+
+
+.contenair{
+    
+    text-align: center;
+
+}
+#table tr th{
+    width: 1%;
+    border: 1px solid white;
+    font-size: 18px;
+    padding: 10px;
+    color: white;
+    
+}
+.for{
+    color: white;
+    font-family: serif;
+    font-size: 30px;
+    margin-bottom:200px ;
+}
+.for .in{
+    margin-top:200px;
+    margin-left: 600px;
+    display: flex;
+}
+.contenair #button button:hover{
+    background-color: green;
+    
+}

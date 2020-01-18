@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="contenair">
+      <div class="for">
+           <h1>Formulaire</h1>
+           <div id="in">
+               Nome     :<input type="text" class="value" placeholder="Nom" id="nom"><br>
+               Prénom   :<input type="text" class="value" placeholder="Prénom" id="prénom"><br>
+               Date     :<input type="date" class="value" placeholder="Date" id="date"><br> 
+               lieu     :<input type="text" class="value" placeholder="lieu" id="lieu"><br> 
+               numéro   :<input type="text" class="value" placeholder="numéro" id="numéro"><br>
+               Addresse :<input type="text" class="value" placeholder="Addresse" id="addresse"><br>
+           </div>
+          <button type="button" class="button" onclick="myFunction()">Ajouter</button>
+      </div>
+    <table id="table">
+        <tr>
+            <th> nom</th>
+            <th> prénom</th>
+            <th> date de naissance</th>
+            <th> lieu de naissance</th>
+            <th> numéro de téléphone</th>
+            <th> addresse</th>
+        </tr>
+    </table>
+  </div>  
+  <script>
+            class Member{
+    constructor(nom,prénom,date,lieu,numéro,addresse){
+    this.nom=nom;
+    this.prénom=prénom;
+    this.date=date;
+    this.lieu=lieu;
+    this.numéro=numéro;
+    this.addresse=addresse;
+    }
+    }
+      function myFunction(){
+
+                  let member = new Member(
+              document.getElementById('nom').value,
+              document.getElementById('prénom').value,
+              document.getElementById('date').value,
+              document.getElementById('lieu').value,
+              document.getElementById('numéro').value,
+              document.getElementById('addresse').value
+              );
+
+                   // Création de la ligne
+  TR = document.createElement ("tr");
+
+// Création de la première cellule
+TD1  = document.createElement ("th");
+TXT1 = document.createTextNode (member.nom);
+TD1.appendChild (TXT1);
+
+// Création de la deuxième cellule
+TD2  = document.createElement ("th");
+TXT2 = document.createTextNode (member.prénom);
+TD2.appendChild (TXT2);
+
+// Création de la 3eme cellule
+TD3  = document.createElement ("th");
+TXT3 = document.createTextNode (member.date);
+TD3.appendChild (TXT3);
+
+// Création de la 4eme cellule
+TD4  = document.createElement ("th");
+TXT4 = document.createTextNode (member.lieu);
+TD4.appendChild (TXT4);
+
+// Création de la 5eme cellule
+TD5  = document.createElement ("th");
+TXT5 = document.createTextNode (member.numéro);
+TD5.appendChild (TXT5);
+
+// Création de la 6eme cellule
+TD6  = document.createElement ("th");
+TXT6 = document.createTextNode (member.addresse);
+TD6.appendChild (TXT6);
+
+// On assemble les cellules a la ligne
+TR.appendChild(TD1);
+TR.appendChild(TD2);
+TR.appendChild(TD3);
+TR.appendChild(TD4);
+TR.appendChild(TD5);
+TR.appendChild(TD6);
+
+// On assemble la ligne au tableau
+document.getElementById ('table').appendChild (TR);
+
+// clear les cellules 
+document.getElementById ('nom').value="";
+                   
+} 
+  </script>
+</body>
+</html>
+
+
+
+
+
